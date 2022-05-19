@@ -8,12 +8,13 @@ import java.util.Map;
 /**
  * 单例模式
  * 双重检查机制
+ * 单例模式没有main方法测试，如果要跑测试，自行配置net.sf.cglib.beans.BeanCopier包。
  */
 public class BeanSingletonUtils {
     /**
      * 缓存
      */
-    public static Map<String, BeanCopier> beanCopierCacheMap = new HashMap<>();
+    public static Map<String, BeanCopier> beanCopierCacheMap = new HashMap<String, BeanCopier>();
 
     /**
      * 将source对象的属性拷贝到target对象
